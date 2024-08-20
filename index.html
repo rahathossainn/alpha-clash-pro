@@ -24,7 +24,7 @@
              <!-- screen -->
              <div class="artboard artboard-horizontal phone-6 border-[18px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
                 <div class="flex justify-center">
-                    <p class="bg-[#010313CC] rounded-b-xl px-6 pb-4">Don't watch keyboard  while playing...</p>
+                    <p class="bg-[#010313CC] text-white rounded-b-xl px-6 pb-4">Don't watch keyboard  while playing...</p>
                 </div>
                 <div class="flex justify-center items-center min-h-full">
                     <p id="current-alphabet" class="text-black text-9xl font-bold uppercase">Y</p>
@@ -69,16 +69,16 @@
             <!-- keyboard end -->
 
             <!-- life score -->
-            <div class="justify-between w-3/5 flex hidden">
+            <div class="justify-between w-3/5 flex">
                 <button class="btn rounded-full bg-[#894189] text-white">
                     <p>Life</p>
                     <img src="icon/heart.svg" alt="">
-                    <span>1</span>
+                    <span id="current-life">5</span>
                   </button>
                 <button class="btn rounded-full bg-[#360490] text-white">
                     <p>Score</p>
                     <img src="icon/dollar.svg" alt="">
-                    <span>1</span>
+                    <span id="current-score">0</span>
                   </button>
                 </div>
             </div>
@@ -86,13 +86,13 @@
         </section>
         
         <!-- end score -->
-        <section class="score flex justify-center items-center min-h-screen hidden ">
+        <section id="final-score" class="flex justify-center items-center min-h-screen hidden ">
             <div class="text-white text-center space-y-6 bg-[#FFFFFF33] p-20 rounded-lg">
                 <h1 class="text-8xl">
                     <span class="font-extrabold">Score:</span>
                     <span class="font-extrabold">14</span>
                 </h1>
-                <button class="btn bg-white text-black font-bold hover:text-white px-6 py-4">Play Again</button>
+                <button onclick="play()" class="btn bg-white text-black font-bold hover:text-white px-6 py-4">Play Again</button>
                 <p>Practice will make you Pro</p>
             </div>
 
