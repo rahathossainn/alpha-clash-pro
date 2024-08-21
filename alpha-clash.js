@@ -10,24 +10,40 @@ function handleKeyboardKeyUpEvent(event){
 
     if(playerPressed === expectedAlphabet){
         console.log('you get a point');
-        const currentScoreElement = document.getElementById('current-score');
-        const currentScoreText = currentScoreElement.innerText;
-        const currentScore = parseInt(currentScoreText)
+        // const currentScoreElement = document.getElementById('current-score');
+        // const currentScoreText = currentScoreElement.innerText;
+        // const currentScore = parseInt(currentScoreText)
         
+        // const newScore = currentScore + 1;
+        // currentScoreElement.innerText = newScore;
+        // ------------------------------------------------------------
+
+
+        const currentScore = getTextElementValueById('current-score');
         const newScore = currentScore + 1;
-        currentScoreElement.innerText = newScore;
-        
+        setTextElementValueById('current-score', newScore);
+
+
+
         removeBackgroundColorById(expectedAlphabet);
         continueGame();
     }
     else{
-        const currentLifeElement = document.getElementById('current-life');
-        const currentLifeText = currentLifeElement.innerText;
-        const currentLife = parseInt(currentLifeText);
+        // const currentLifeElement = document.getElementById('current-life');
+        // const currentLifeText = currentLifeElement.innerText;
+        // const currentLife = parseInt(currentLifeText);
 
+        // const newlife = currentLife - 1;
+        
+        // currentLifeElement.innerText = newlife;
+        // ----------------------------------------------------
+        
+        
+        const currentLife = getTextElementValueById('current-life');
         const newlife = currentLife - 1;
+        setTextElementValueById('current-life', newlife);
 
-        currentLifeElement.innerText = newlife;
+        
         if(newlife === 0){
             gameOver();
         }
