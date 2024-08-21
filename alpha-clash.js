@@ -43,7 +43,7 @@ function handleKeyboardKeyUpEvent(event){
         const newlife = currentLife - 1;
         setTextElementValueById('current-life', newlife);
 
-        
+
         if(newlife === 0){
             gameOver();
         }
@@ -64,10 +64,20 @@ function play(){
     removeElementByID('home-screen')
     removeElementByID('final-score')
     showElementById('play-ground')
+
+    setTextElementValueById('current-life', 5)
+    setTextElementValueById('current-score', 0)
+
+
     continueGame();
 }
 
 function gameOver(){
     removeElementByID('play-ground');
     showElementById('final-score');
+
+    // update final score
+
+    const lastScore = getTextElementValueById('current-score')
+    setTextElementValueById('last-score', lastScore)
 }
